@@ -1,0 +1,103 @@
+.featured-img {
+  position: relative;
+  width: 300px;
+}
+
+.featured-img img {
+    width: 100%;
+    height: auto;
+}
+
+.mask_sns {
+    width: 313px;
+    height: 194px;
+    background-color: rgba(0,0,0,0.7);
+    letter-spacing: -0.4em;
+    color: #FFF;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    padding: 84px 0 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+.category .entry-content a:hover .mask_sns,
+.archive .entry-content a:hover .mask_sns {
+    opacity: 1
+}
+
+  .sns-counter {
+      display: inline-block;
+      *display: inline;
+      *zoom:1;
+      letter-spacing: normal;
+      margin-right: 11px;
+  }
+
+    .sns-counter:first-child {
+        padding-left: 10px
+    }
+
+    .sns-counter>span {
+        font-size: 14px;
+        font-weight: bold;
+        vertical-align: middle;
+        position: relative;
+        top: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .sns-counter .sns-icon {
+        display: inline-block;
+        *display: inline;
+        *zoom:1;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #434343;
+        margin-right: 5px;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: rotateY(-315deg);
+        transform: rotateY(-315deg);
+        opacity: 0;
+    }
+
+      .category .entry-content a:hover .sns-counter .sns-icon,
+      .archive .entry-content a:hover .sns-counter .sns-icon {
+          -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+          opacity: 1;
+      }
+
+        .sns-counter .sns-facebook {
+            -webkit-transition: -webkit-transform 0.35s ease 0.05s,opacity 0.35s ease 0.05s;
+            transition: transform 0.35s ease 0.05s,opacity 0.35s ease 0.05s
+        }
+
+        .sns-counter .sns-twitter {
+            -webkit-transition: -webkit-transform 0.35s ease 0.1s,opacity 0.35s ease 0.1s;
+            transition: transform 0.35s ease 0.1s,opacity 0.35s ease 0.1s
+        }
+
+        .sns-counter .sns-pinterest {
+            -webkit-transition: -webkit-transform 0.35s ease 0.15s,opacity 0.35s ease 0.15s;
+            transition: transform 0.35s ease 0.15s,opacity 0.35s ease 0.15s
+        }
+
+          .sns-counter i {
+              font-size: 16px;
+              line-height: 1.5em;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+          }
