@@ -6,11 +6,11 @@ $(function() {
 
         window.MAIN = MAIN;
 
-        MAIN = function() {
+        MAIN.social = function() {
             this.init.apply(this, arguments);
         };
 
-        MAIN.prototype = {
+        MAIN.social.prototype = {
             init : function() {
 
             },
@@ -123,10 +123,10 @@ $(function() {
 
     })(window.MAIN || {});
 
-    var main = new MAIN();
+    var social = new MAIN.social();
 
     // カテゴリページでSNSの設定を行う。
-    $(".category .article-permalink").each(function() {
+    $(".article-permalink").each(function() {
 
         var $link      = $(this);
         var $facebook  = $(".sns-facebook-counter", $link);
@@ -135,14 +135,13 @@ $(function() {
 
         var url = $link.attr("href");
 
-        main.hasSocialCount({
+        social.hasSocialCount({
             "url": url,
             "$facebook" : $facebook,
             "$twitter"  : $twitter,
             "$pinterest": $pinterest
         }, function(count) {
             //合計の数が１以上ある場合に表示
-            //console.log("total : more than 1");
             $(".mask_sns", $link).show();
         }, function(count) {
             //合計の数が０の場合は非表示

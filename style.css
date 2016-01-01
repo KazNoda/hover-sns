@@ -1,11 +1,11 @@
 .featured-img {
   position: relative;
-  width: 300px;
+  /*width: 300px;*/
 }
 
 .featured-img img {
-    width: 100%;
-    height: auto;
+    /*width: 100%;
+    height: auto;*/
 }
 
 .mask_sns {
@@ -20,12 +20,13 @@
     z-index: 2;
     opacity: 0;
     padding: 84px 0 0;
+    box-sizing: border-box;
     -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
 
-.category .entry-content a:hover .mask_sns,
-.archive .entry-content a:hover .mask_sns {
+a:hover .mask_sns,
+a:hover .mask_sns {
     opacity: 1
 }
 
